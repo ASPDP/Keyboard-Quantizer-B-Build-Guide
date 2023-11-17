@@ -55,7 +55,7 @@
   },"9": {
     "doc": "Setup",
     "title": "キーマップの変更と動作確認",
-    "content": ". | ファームウェアを更新したら Quantizer を PC に差し込み直し、USB キーボードを接続する | Remap または Vial にアクセスし、設定を変更する | キーボードでキーを押すと設定どおりに入力されることを確認する . | キーを押してもなにも入力されない場合は解析方式の変更を試す | . | . キーマップ変更の詳細 . QMKのTAPPING_TERMはVialで変更できます。 . ",
+    "content": ". | ファームウェアを更新したら Quantizer を PC に差し込み直し、USB キーボードを接続する | Remap または Vial にアクセスし、設定を変更する . | 一度Vialに接続した場合、電源を入れ直すまでRemapでは編集できなくなります | . | キーボードでキーを押すと設定どおりに入力されることを確認する . | キーを押してもなにも入力されない場合は解析方式の変更を試す | . | . キーマップ変更の詳細 . QMKのTAPPING_TERMはVialで変更できます。 . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/setup/#%E3%82%AD%E3%83%BC%E3%83%9E%E3%83%83%E3%83%97%E3%81%AE%E5%A4%89%E6%9B%B4%E3%81%A8%E5%8B%95%E4%BD%9C%E7%A2%BA%E8%AA%8D",
     "relUrl": "/setup/#キーマップの変更と動作確認"
   },"10": {
@@ -91,7 +91,7 @@
   },"15": {
     "doc": "Edit Keymap",
     "title": "キーマップの変更",
-    "content": ". | レイアウトの選択 | 無線接続関連のキー設定 | マウスの認識 . | 簡易ジェスチャ機能 | 補足 | . | . キーマップの変更にはRemapを使用します。 . Remap . ",
+    "content": ". | レイアウトの選択 | Quantizer独自のキー設定 | マウスの認識 . | 簡易ジェスチャ機能 | 補足 | . | . キーマップの変更にはRemap または Vial を使用します。 . Remap Vial . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/keymap/#%E3%82%AD%E3%83%BC%E3%83%9E%E3%83%83%E3%83%97%E3%81%AE%E5%A4%89%E6%9B%B4",
     "relUrl": "/keymap/#キーマップの変更"
   },"16": {
@@ -102,10 +102,10 @@
     "relUrl": "/keymap/#レイアウトの選択"
   },"17": {
     "doc": "Edit Keymap",
-    "title": "無線接続関連のキー設定",
-    "content": "無線接続を制御するためのキーはRemapのBMPタブから設定できます。 . キーボード単体で無線接続先を追加する、接続先を切り替える、有線/無線を切り替える場合に必要です。 . ペアリング状況の確認 . | キー | 説明 | . | AD_WO_L | 新しいデバイスを追加する際やペアリング済みのデバイスのいずれかと接続する際に使う | . | ADV ID[0..7] | ペアリング済みのデバイスのIDを指定して接続を試みる。接続先を切り替えるときに使う | . | SEL BLE | 無線接続経由の入力に切り替える | . | SEL USB | 有線接続経由の入力に切り替える | . ",
-    "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/keymap/#%E7%84%A1%E7%B7%9A%E6%8E%A5%E7%B6%9A%E9%96%A2%E9%80%A3%E3%81%AE%E3%82%AD%E3%83%BC%E8%A8%AD%E5%AE%9A",
-    "relUrl": "/keymap/#無線接続関連のキー設定"
+    "title": "Quantizer独自のキー設定",
+    "content": "無線接続を制御するためのキーなどはRemapのBMPタブまたはVialのUSERタブから設定できます。 . キーボード単体で無線接続先を追加する、接続先を切り替える、有線/無線を切り替える場合に必要です。 . ペアリング状況の確認 . | キー | 説明 | . | AD_WO_L | 新しいデバイスを追加する際やペアリング済みのデバイスのいずれかと接続する際に使う | . | ADV ID[0..7] | ペアリング済みのデバイスのIDを指定して接続を試みる。接続先を切り替えるときに使う | . | SEL BLE | 無線接続経由の入力に切り替える | . | SEL USB | 有線接続経由の入力に切り替える | . | JU OVR | 日本語キーボードを英語OSで動作させるためのオーバーライドを設定する | . | UJ OVR | 英語キーボードを日本語OSで動作させるためのオーバーライドを設定する | . | D OVR | 上記オーバーライドを無効にする | . ",
+    "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/keymap/#quantizer%E7%8B%AC%E8%87%AA%E3%81%AE%E3%82%AD%E3%83%BC%E8%A8%AD%E5%AE%9A",
+    "relUrl": "/keymap/#quantizer独自のキー設定"
   },"18": {
     "doc": "Edit Keymap",
     "title": "マウスの認識",
@@ -222,47 +222,53 @@
     "relUrl": "/release_notes/"
   },"37": {
     "doc": "Release Notes",
+    "title": "2023/11/17(Bootloader 1.0.2-rc, Application 1.0.3-rc)",
+    "content": ". | 最新版RemapおよびVial対応のファームウェアを公開 | . ",
+    "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/release_notes/#20231117bootloader-102-rc-application-103-rc",
+    "relUrl": "/release_notes/#20231117bootloader-102-rc-application-103-rc"
+  },"38": {
+    "doc": "Release Notes",
     "title": "2023/10/31(Application 0.11.2)",
     "content": ". | FN0, FN1, FN2にJP/USオーバライド機能を割り当て | . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/release_notes/#20231031application-0112",
     "relUrl": "/release_notes/#20231031application-0112"
-  },"38": {
+  },"39": {
     "doc": "Release Notes",
     "title": "2021/12/20(Bootloader 0.11.1, Application 0.11.1)",
     "content": ". | 無線接続時の安定性に関する修正 | . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/release_notes/#20211220bootloader-0111-application-0111",
     "relUrl": "/release_notes/#20211220bootloader-0111-application-0111"
-  },"39": {
+  },"40": {
     "doc": "Release Notes",
     "title": "2021/11/10(Bootloader 0.11.0, Application 0.11.0)",
     "content": ". | メディアキー関連の認識の改善 | 安定性に関する修正 | . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/release_notes/#20211110bootloader-0110-application-0110",
     "relUrl": "/release_notes/#20211110bootloader-0110-application-0110"
-  },"40": {
+  },"41": {
     "doc": "Release Notes",
     "title": "2021/9/23(Application 0.10.4)",
     "content": ". | 無線接続時の通信頻度を修正(マウス接続時のバッファあふれ対策) | モディファイヤと通常キーが同時に押下されたときにモディファイヤを優先して処理するように変更 | レイヤ移動中にもマウスボタンが動作するように修正 | . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/release_notes/#2021923application-0104",
     "relUrl": "/release_notes/#2021923application-0104"
-  },"41": {
+  },"42": {
     "doc": "Release Notes",
     "title": "2021/9/3(Application 0.10.3)",
     "content": ". | 起動時にサブマイコンとの接続に失敗することがある不具合を修正 | . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/release_notes/#202193application-0103",
     "relUrl": "/release_notes/#202193application-0103"
-  },"42": {
+  },"43": {
     "doc": "Release Notes",
     "title": "2021/8/6(Application 0.10.2)",
     "content": ". | マクロ機能を追加(現時点ではVIAからのみ書き換え可能=&gt;Remapからの書き換えにも対応) | マウスホイールの動作を変更可能にした | . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/release_notes/#202186application-0102",
     "relUrl": "/release_notes/#202186application-0102"
-  },"43": {
+  },"44": {
     "doc": "Release Notes",
     "title": "2021/7/23(Application 0.10.1)",
     "content": ". | MouseKeyの挙動を修正 | MO割り当て時のマウスジェスチャの挙動を修正 | サブマイコンからの取りこぼし対策を強化 | . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/release_notes/#2021723application-0101",
     "relUrl": "/release_notes/#2021723application-0101"
-  },"44": {
+  },"45": {
     "doc": "Release Notes",
     "title": "2021/7/17 (Bootloader 0.10.0, Application 0.10.0, Host 1.1.0)",
     "content": ". | 公開 | . ",
