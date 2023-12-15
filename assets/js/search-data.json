@@ -157,7 +157,7 @@
   },"26": {
     "doc": "Build Firmware",
     "title": "環境構築",
-    "content": "QMKの導入手順にしたがって必要ソフトをインストールしてください。 Pro Microを使う場合とは異なり、arm-none-eabi-gccとその関連ソフトも必須です。 なお、submoduleのlufaやChibiOSには依存していないため、これらの導入は飛ばしても構いません。 . | BLE Micro Pro用のQMK Firmwareをqmk_firmware_bmp_vialという名前でclone git clone --depth 1 -b dev/ble-micro-pro https://github.com/sekigon-gonnoc/vial-qmk.git qmk_firmware_bmp_vial . | ビルドに必要なツールをインストール cd qmk_firmware_bmp ./util/qmk_install.sh . | uf2ブートローダを使わない場合、nrfutil もインストール(要Python3.6–3.8) pip install nrfutil --user . | . ",
+    "content": "QMKの導入手順にしたがって必要ソフトをインストールしてください。 Pro Microを使う場合とは異なり、arm-none-eabi-gccとその関連ソフトも必須です。 . | BLE Micro Pro用のQMK Firmwareをqmk_firmware_bmp_vialという名前でclone git clone --depth 1 -b dev/ble-micro-pro https://github.com/sekigon-gonnoc/vial-qmk.git qmk_firmware_bmp_vial . | ビルドに必要なツールをインストール cd qmk_firmware_bmp ./util/qmk_install.sh . | uf2ブートローダを使わない場合、nrfutil もインストール(要Python3.6–3.8) pip install nrfutil --user . | . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/build_firmware/#%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89",
     "relUrl": "/build_firmware/#環境構築"
   },"27": {
