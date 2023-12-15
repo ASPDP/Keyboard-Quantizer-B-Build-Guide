@@ -157,19 +157,19 @@
   },"26": {
     "doc": "Build Firmware",
     "title": "環境構築",
-    "content": "QMKの導入手順にしたがって必要ソフトをインストールしてください。 Pro Microを使う場合とは異なり、arm-none-eabi-gccとその関連ソフトも必須です。 なお、submoduleのlufaやChibiOSには依存していないため、これらの導入は飛ばしても構いません。 . | BLE Micro Pro用のQMK Firmwareをqmk_firmware_bmpという名前でclone git clone --depth 1 -b dev/ble_micro_pro https://github.com/sekigon-gonnoc/qmk_firmware.git qmk_firmware_bmp . | ビルドに必要なツールをインストール cd qmk_firmware_bmp ./util/qmk_install.sh . | uf2ブートローダを使わない場合、nrfutil もインストール(要Python3.6–3.8) pip install nrfutil --user . | . ",
+    "content": "QMKの導入手順にしたがって必要ソフトをインストールしてください。 Pro Microを使う場合とは異なり、arm-none-eabi-gccとその関連ソフトも必須です。 なお、submoduleのlufaやChibiOSには依存していないため、これらの導入は飛ばしても構いません。 . | BLE Micro Pro用のQMK Firmwareをqmk_firmware_bmp_vialという名前でclone git clone --depth 1 -b dev/ble-micro-pro https://github.com/sekigon-gonnoc/vial-qmk.git qmk_firmware_bmp_vial . | ビルドに必要なツールをインストール cd qmk_firmware_bmp ./util/qmk_install.sh . | uf2ブートローダを使わない場合、nrfutil もインストール(要Python3.6–3.8) pip install nrfutil --user . | . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/build_firmware/#%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89",
     "relUrl": "/build_firmware/#環境構築"
   },"27": {
     "doc": "Build Firmware",
     "title": "編集する",
-    "content": "ファームウェアを編集する場合、keyboards/quantizer/kqb/ 以下を編集してください . ",
+    "content": "ファームウェアを編集する場合、keyboards/sekigon/quantizer/kqb/ 以下を編集してください . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/build_firmware/#%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B",
     "relUrl": "/build_firmware/#編集する"
   },"28": {
     "doc": "Build Firmware",
     "title": "ビルドする",
-    "content": "uf2ファイルを生成する . 事前にUF2ブートローダを書き込んでいないとこの方法は使えません . uf2ブートローダの書き込み . uf2ブートローダが起動するとQuantizerがマスストレージとして認識されます。uf2ファイルをこのドライブにコピーすることでファームウェアを更新できます。 . 以下のコマンドでuf2ファイルが生成されます。 . make keyboard_quantizer/kqb:default:uf2 . CLIからdfuコマンドでブートローダを起動し、KQB_BOOTという名前のドライブが表示されたらuf2ファイルをコピーしてください。 . nrfutilで書き込む . 以下のコマンドでnrfutil用のzipファイルを生成し、書き込み待機状態になったらQuantizerをPCに接続してください。 . make &lt;keyboard&gt;:&lt;keymap&gt;:nrfutil . ",
+    "content": "uf2ファイルを生成する . 事前にUF2ブートローダを書き込んでいないとこの方法は使えません . uf2ブートローダの書き込み . uf2ブートローダが起動するとQuantizerがマスストレージとして認識されます。uf2ファイルをこのドライブにコピーすることでファームウェアを更新できます。 . 以下のコマンドでuf2ファイルが生成されます。 . make sekigon/keyboard_quantizer/kqb:default:uf2 . CLIからdfuコマンドでブートローダを起動し、KQB_BOOTという名前のドライブが表示されたらuf2ファイルをコピーしてください。 . nrfutilで書き込む . 以下のコマンドでnrfutil用のzipファイルを生成し、書き込み待機状態になったらQuantizerをPCに接続してください。 . make &lt;keyboard&gt;:&lt;keymap&gt;:nrfutil . ",
     "url": "https://sekigon-gonnoc.github.io/Keyboard-Quantizer-B-Build-Guide/build_firmware/#%E3%83%93%E3%83%AB%E3%83%89%E3%81%99%E3%82%8B",
     "relUrl": "/build_firmware/#ビルドする"
   },"29": {
